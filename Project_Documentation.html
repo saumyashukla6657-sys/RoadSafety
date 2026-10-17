@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Documentation: GuardianNodes RoadSoS</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            background-color: #fff;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+        h1 {
+            text-align: center;
+            color: #00d2ff;
+            margin-bottom: 0;
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #00d2ff;
+            padding-bottom: 5px;
+            margin-top: 40px;
+        }
+        h3 {
+            color: #e74c3c;
+            margin-top: 25px;
+        }
+        .subtitle {
+            text-align: center;
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 1.2em;
+            margin-top: 5px;
+        }
+        .team-info {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 5px solid #2ed573;
+        }
+        .team-info p {
+            margin: 5px 0;
+            font-weight: bold;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #95a5a6;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        @media print {
+            body {
+                padding: 0;
+                background-color: #fff;
+            }
+            .container {
+                box-shadow: none;
+                border: none;
+                max-width: 100%;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>GuardianNodes RoadSoS</h1>
+    <p class="subtitle">AI-Powered Emergency Road Accident Response System</p>
+
+    <div class="team-info">
+        <p>Team Name: Coders</p>
+        <p>Team Leader: Rohit Singh</p>
+        <p>Teammate: Shawsti Singh</p>
+    </div>
+
+    <h2>1. Project Overview</h2>
+    <p><strong>GuardianNodes RoadSoS</strong> is an advanced, production-grade emergency response dashboard built with Streamlit. It leverages artificial intelligence to rapidly assess accident severity and dynamically coordinates emergency vehicles using traffic-aware routing and simulated mesh communications.</p>
+    <p>The system is designed to combat delayed response times in emergency situations, utilizing a combination of Natural Language Processing and graph-based routing algorithms.</p>
+
+    <h2>2. Key Modules</h2>
+    
+    <h3>A. Intelligent Triage Engine</h3>
+    <p>Uses a Zero-Shot Classification model (DistilBERT via HuggingFace) to analyze incoming incident reports in natural language. It extracts key entities (casualties, vehicles, hazards) and calculates an urgency score (from Low to Critical) to prioritize emergency response efficiently.</p>
+    
+    <h3>B. Graph Routing Engine</h3>
+    <p>Utilizes NetworkX to build a realistic road network graph. It applies Dijkstra's algorithm to calculate the optimal route for emergency vehicles (such as ambulances, fire engines, police cars, and hazmat units), factoring in real-time simulated traffic conditions.</p>
+    
+    <h3>C. Mesh Protocol Simulator</h3>
+    <p>Simulates a robust BLE/Wi-Fi Direct mesh network. It ensures that critical data packets reach the centralized dashboard even in remote areas or during communication breakdowns by hopping through intermediary nodes with CRC validation, guaranteeing no data loss.</p>
+
+    <h2>3. Technology Stack</h2>
+    <ul>
+        <li><strong>Frontend & Dashboard:</strong> Streamlit (Python 3.11+) featuring a premium dark glassmorphism UI.</li>
+        <li><strong>Machine Learning:</strong> HuggingFace Transformers, PyTorch for Zero-Shot Classification.</li>
+        <li><strong>Data Structures & Routing:</strong> NetworkX for Dijkstra-based pathfinding algorithms.</li>
+        <li><strong>Visualization:</strong> Plotly Express, Plotly Graph Objects for dynamic radar charts and interactive route maps.</li>
+        <li><strong>Data Manipulation:</strong> Pandas, NumPy.</li>
+    </ul>
+
+    <h2>4. Future Scope & Impact</h2>
+    <p>This system has the immense potential to be scaled nationally across all emergency control rooms. By dramatically reducing emergency response times and optimizing vehicle dispatch through predictive analytics, RoadSoS can save countless lives on the road and bring emergency infrastructure into the future.</p>
+
+    <div class="footer">
+        Generated for Team Coders | Project GuardianNodes RoadSoS Documentation
+    </div>
+</div>
+
+</body>
+</html>

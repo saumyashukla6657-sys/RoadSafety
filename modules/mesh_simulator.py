@@ -117,7 +117,7 @@ def _decode_and_verify(raw: bytes) -> tuple[bool, str, str]:
         return False, "N/A", "TRUNCATED"
 
     payload  = raw[:STRUCT_SIZE]
-    crc_recv = raw[STRUCT_SIZE:]
+    crc_recv = raw[STRUCT_SIZE:STRUCT_SIZE + 4]
 
     expected_crc = binascii.crc32(payload) & 0xFFFFFFFF
     received_crc = struct.unpack("!I", crc_recv)[0]

@@ -935,7 +935,9 @@ def run_full_dispatch(
     # ── 2. Graph Routing ──────────────────────────────────────────────
     with st.spinner("🗺️ Computing traffic-aware route …"):
         routing_engine.refresh_traffic()
-        target_node = random.randint(50, 95)
+        target_node = routing_engine.find_nearest_node(lat, lon)
+        if target_node == 0:
+            target_node = random.randint(50, 95)
         route = routing_engine.route(
             source_node=0,
             target_node=target_node,

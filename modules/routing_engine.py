@@ -296,6 +296,18 @@ class GraphRoutingEngine:
         for u, v in self.G.edges():
             self.G[u][v]["traffic_level"] = self._assign_traffic()
 
+    def find_nearest_node(self, lat: float, lon: float) -> int:
+        """Find the graph node closest to the given (lat, lon) coordinates."""
+        best_node = 0
+        min_dist = float("inf")
+        target_coord = (lat, lon)
+        for node_id, coord in self._node_coords.items():
+            dist = self._haversine(target_coord, coord)
+            if dist < min_dist:
+                min_dist = dist
+                best_node = node_id
+        return best_node
+
     def node_coords(self, node: int) -> tuple[float, float]:
         return self._node_coords[node]
 

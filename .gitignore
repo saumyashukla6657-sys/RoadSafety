@@ -15,5 +15,15 @@ build/
 *.pt
 *.bin
 *.safetensors
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Generated Documents
+*.pdf
+*.pptx
+
 # HuggingFace model cache (too large for GitHub)
 ~/.cache/huggingface/

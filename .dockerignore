@@ -18,5 +18,6 @@ htmlcov/
 *.zip
 .idea/
 .vscode/
+docs/
 Dockerfile*
 docker-compose*.yml
